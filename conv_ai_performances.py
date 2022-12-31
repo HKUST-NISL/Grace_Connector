@@ -20,6 +20,8 @@ class ConvAIPerformance:
         self.performance_event_pub = rospy.Publisher(self.performance_event_topic_to_convas, String, queue_size=10)
         print("************ Connector Initialized ************")
         rospy.spin()
+        
+
 
     def speech_string_callback(self,performance_sel):
         print ("Performance to be played: %s"%(performance_sel.data))
