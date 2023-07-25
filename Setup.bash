@@ -4,7 +4,7 @@
 source ./IP_Setup_Master.bash
 
 #Start custom vad process
-xterm -hold -e "sleep 30;cd ..; source launch_vad_streamer.sh" &
+xterm -hold -e "pulseaudio -k; sleep 30; cd ..; source launch_vad_streamer.sh" &
 
 #Performance connector is now legacy
 #xterm -hold -e "sleep 30;source ./IP_Setup_Master.bash;python3 ./conv_ai_performances.py --topic='/grace_performance'"&
